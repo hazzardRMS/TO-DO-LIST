@@ -1,6 +1,6 @@
 # to-do-list
  _Um projeto de prática de conceitos de manipulação no DOM através do JavaScript._
- pkmn-party-creatorhzzd.netlify.app
+https://to-do-list-hzzd.netlify.app
  ## By: HzzdRMS
 ---
 .
