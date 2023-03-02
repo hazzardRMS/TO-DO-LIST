@@ -1,0 +1,221 @@
+/*variaveis*/
+
+:root{
+    --cor-principal: #00b7ff;
+    --cor-secundaria : #3a3a3a;
+}
+
+
+/*PAGINA GERAL*/
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-secundaria);
+}
+
+.titulo-principal{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 35pt;
+    text-transform: uppercase;
+    color: var(--cor-principal);
+}
+
+.titulo-principal::after{
+    content: ' v1.0';
+    color: #fefefe;
+    font-weight: lighter;
+    font-size: 13pt;
+}
+
+
+/*AREA DE INTERAÇÃO*/
+
+#form{
+    background-color: var(--cor-principal);
+    border-radius: 15px 15px 0 0;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 35px 50px;
+}
+
+
+#tarefa{
+height: 40px;
+flex: 1;
+border-radius: 10px  0 0 10px ;
+border: none;
+padding: 10px 24px;
+font-size: 16pt;
+outline: none;
+}
+
+#form button{
+    width: 350px;
+    border-radius: 0  10px 10px 0;
+    border: none;
+    font-size: 16pt;
+    background-color: var(--cor-secundaria);
+    color: #fefefe;
+}
+button{
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+button:hover{
+    cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    font-weight: 600;
+}
+
+/*LISTA DE TAREFAS*/
+.lista-tarefas{
+    background-color: var(--cor-principal);
+    width: 60%;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 0 0 15px 15px;
+    padding: 35px 50px;
+}
+
+.lista-tarefas li{
+    margin-bottom: 15px;
+    /* border: 2px solid var(--cor-secundaria); */
+    padding: 10px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #3a3a3a;
+    background-color: #fefefe;
+}
+
+.btn-concluir{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px  0 0 5px ;
+    border: none;
+    cursor: pointer;
+    background-color:  #16d345;
+    
+    
+}
+
+.btn-apagar{
+    width: 50%;
+    height: 30px;
+    border-radius: 0  5px 5px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #c02626;
+    color: #fefefe;
+}
+
+/*TAREFAS*/
+.concluida{
+    text-decoration: line-through;
+    background-color: #adff2f!important;
+    font-style: italic;
+}
+
+.concluida > .div-btn {
+    filter: grayscale(1)
+}
+.div-btn{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+
+footer{
+    text-align: center;
+    margin-top: 35pt;
+    color: #00b7ff;
+}
+span{
+    font-weight: bold;
+}
+
+/*versão de celular*/
+
+@media(max-width : 800px){
+   .titulo-principal{
+    font-size: 26pt;
+   }
+
+   #form{
+    background-color: var(--cor-principal);
+    border-radius: 15px 15px 0 0;
+    width: 95%;
+    margin: auto;
+    padding: 10px 25px;
+}
+
+#tarefa{
+    height: 40px;
+    width: 70%;
+    border-radius: 10px  0 0 10px ;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12pt;
+    outline: none;
+    }
+#form button{
+    width: 30%;
+    border-radius: 0  10px 10px 0;
+    border: none;
+    font-size: 12pt;
+    background-color: var(--cor-secundaria);
+    color: #fefefe;
+}
+button{
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+button:hover{
+    cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    font-weight: 600;
+}
+
+/*LISTA DE TAREFAS*/
+.lista-tarefas{
+    background-color: var(--cor-principal);
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 0 0 15px 15px;
+    padding: 15px 25px;
+}
+
+.lista-tarefas li{
+    margin-bottom: 15px;
+    /* border: 2px solid var(--cor-secundaria); */
+    padding: 8px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #3a3a3a;
+    background-color: #fefefe;
+    font-size: 12pt;
+}
+.div-btn{
+    display: flex;
+    align-items: center;
+    width: 28%;
+}
+
+}
