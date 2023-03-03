@@ -11,14 +11,17 @@
     <title>Lista de Tarefas 1.0</title>
 </head>
 <body>
-    <h1 class="titulo-principal">Lista de Tarefas</h1>
+    <h1 class="titulo-principal titulo-escuro">Lista de Tarefas</h1>
+    <div class="trocar-tema--area">
+        <button id="trocarBtn">Alterar tema</button>
+    </div>
 
-    <form id="form">
+    <form id="form" class="form-escuro">
         <input type="text" id="tarefa" placeholder="Adicione uma nova tarefa">
-        <button type="submit">Adicionar</button>
+        <button type="submit" class="escuro" >Adicionar</button>
     </form>
 
-    <ul class="lista-tarefas">
+    <ul class="lista-tarefas lista-escura">
         <!--As tarefas serão adicionas aqui via JavaScript-->
     </ul>
 

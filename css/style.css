@@ -1,8 +1,10 @@
 /*variaveis*/
 
 :root{
-    --cor-principal: #00b7ff;
+    --cor-principal: #0393d1;
     --cor-secundaria : #3a3a3a;
+    --cor-alternativa : #5bffc6;
+    --cor-clara : #fefefe;
 }
 
 
@@ -16,20 +18,34 @@
 
 body{
     background-color: var(--cor-secundaria);
+    transition: all 0.5s;
+}
+.claro{
+    background-color: var(--cor-clara);
+    color: var(--cor-secundaria);
+}
+.escuro{
+    background-color: var(--cor-secundaria);
+    color: #fefefe;
 }
 
 .titulo-principal{
     text-align: center;
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     font-size: 35pt;
-    text-transform: uppercase;
-    color: var(--cor-principal);
+    text-transform: uppercase;   
+}
+.titulo-escuro{
+    color: var(--cor-alternativa);
 }
 
+.titulo-claro{
+    color: var(--cor-principal)
+}
 .titulo-principal::after{
     content: ' v1.0';
-    color: #fefefe;
+    color: var(--cor-principal);
     font-weight: lighter;
     font-size: 13pt;
 }
@@ -38,7 +54,6 @@ body{
 /*AREA DE INTERAÇÃO*/
 
 #form{
-    background-color: var(--cor-principal);
     border-radius: 15px 15px 0 0;
     width: 60%;
     margin: auto;
@@ -46,8 +61,28 @@ body{
     justify-content: center;
     padding: 35px 50px;
 }
-
-
+#form button{
+    width: 350px;
+    border-radius: 0  10px 10px 0;
+    border: none;
+    font-size: 16pt;
+}
+.form-escuro{
+    background-color:var(--cor-alternativa)
+}
+.form-claro{
+    background-color: var(--cor-principal);
+    box-shadow: 1px 1px 16px #c3c4c4;
+}
+.form-claro > input{
+    background-color: var(--cor-clara);
+    color: var(--cor-secundaria);
+}
+.form-claro > button{
+    background-color: #eeeeee;
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+}
 #tarefa{
 height: 40px;
 flex: 1;
@@ -58,14 +93,8 @@ font-size: 16pt;
 outline: none;
 }
 
-#form button{
-    width: 350px;
-    border-radius: 0  10px 10px 0;
-    border: none;
-    font-size: 16pt;
-    background-color: var(--cor-secundaria);
-    color: #fefefe;
-}
+
+
 button{
     transition: all 0.5s;
     text-transform: uppercase;
@@ -77,16 +106,36 @@ button:hover{
     font-weight: 600;
 }
 
+.trocar-tema--area{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 25px;
+   transition: all 0.5s;
+}
+.trocar-tema--area button{
+    padding: 10px 35px;
+    background-color: #c3c4c4;
+    border-radius: 15px;
+    border: none;
+    font-size: 12pt;
+}
+
 /*LISTA DE TAREFAS*/
 .lista-tarefas{
-    background-color: var(--cor-principal);
+    
     width: 60%;
     margin: auto;
     margin-top: 25px;
     border-radius: 0 0 15px 15px;
     padding: 35px 50px;
 }
-
+.lista-escura{
+    background-color: var(--cor-alternativa);
+}
+.lista-clara{
+    background-color: var(--cor-principal);
+    box-shadow: 1px 1px 16px #c3c4c4;
+}
 .lista-tarefas li{
     margin-bottom: 15px;
     /* border: 2px solid var(--cor-secundaria); */
@@ -141,7 +190,10 @@ button:hover{
 footer{
     text-align: center;
     margin-top: 35pt;
-    color: #00b7ff;
+    color: var(--cor-alternativa);;
+}
+.footer-claro{
+    color: var(--cor-principal);
 }
 span{
     font-weight: bold;
@@ -154,8 +206,13 @@ span{
     font-size: 26pt;
    }
 
+
+   .trocar-tema--area button{
+    padding: 5px 10px;
+    font-size: 6pt;
+}
+
    #form{
-    background-color: var(--cor-principal);
     border-radius: 15px 15px 0 0;
     width: 95%;
     margin: auto;
@@ -176,8 +233,6 @@ span{
     border-radius: 0  10px 10px 0;
     border: none;
     font-size: 12pt;
-    background-color: var(--cor-secundaria);
-    color: #fefefe;
 }
 button{
     transition: all 0.5s;
@@ -192,7 +247,7 @@ button:hover{
 
 /*LISTA DE TAREFAS*/
 .lista-tarefas{
-    background-color: var(--cor-principal);
+ 
     width: 95%;
     margin: auto;
     margin-top: 15px;

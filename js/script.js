@@ -154,4 +154,20 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   });
 
- 
+ /*TROCAR TEMA*/
+
+ const trocarBtn = document.getElementById('trocarBtn')
+ trocarBtn.addEventListener('click',()=>{
+    const body = document.body
+    const h1 = document.querySelector('h1')
+    const ul = document.querySelector('ul')
+    const footer = document.querySelector('footer')
+    body.classList.toggle('claro')
+    h1.classList.toggle('titulo-claro')
+    h1.classList.toggle('titulo-escuro')
+    form.classList.toggle('form-escuro')
+    form.classList.toggle('form-claro')
+    ul.classList.toggle('lista-escura')
+    ul.classList.toggle('lista-clara')
+    footer.classList.toggle('footer-claro')
+ })
